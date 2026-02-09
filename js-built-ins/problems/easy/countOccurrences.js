@@ -20,7 +20,17 @@
 
 
 function countOccurrences(arr) {
-  // Your code here
+   const counts = {};
+
+  for (let num of arr) {
+    if (counts[num]) {
+      counts[num]++;
+    } else {
+      counts[num] = 1;
+    }
+  }
+
+  return counts;
 }
 
 module.exports = countOccurrences;
